@@ -1,3 +1,4 @@
+// contract test code will go here
 const assert = require('assert');
 const ganache = require('ganache-cli');
 const Web3 = require('web3');
@@ -13,6 +14,11 @@ beforeEach(async () => {
 
     lottery = await new web3.eth.Contract(JSON.parse(interface))
         .deploy({ data: bytecode })
-        .send({ from: accounts[0], gas: '1000000' });
+        .send({ from: accounts[0], gas: "1000000" });
 });
 
+describe("Lottery Contract", () => {
+    it("deploys a contract", () => {
+        assert.ok(lottery.options.address);
+    });
+});
