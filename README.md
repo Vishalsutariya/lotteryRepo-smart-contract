@@ -1,4 +1,4 @@
-# basic-smart-contract-repo
+# Lottery-Advanced-smart-contract-repo
 This is basic smart contract repository
 
 After cloning repository run this command to install all packages --> npm install
